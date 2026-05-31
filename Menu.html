@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Food Menu</title>
+
+    <link rel="stylesheet" href="Menu.css">
+    <script src="Menu.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Food Menu</h1>
+
+    <img src="Quick.png" height="100px" width="100px" alt="Quick Food Logo">
+
+    <nav>
+        <a href="Index.html">Home</a>
+        <a href="Menu.html">Menu</a>
+        <a href="Cart.html">Cart</a>
+        <a href="Login.html">Login</a>
+    </nav>
+</header>
+
+<!-- CATEGORY FILTER -->
+<div class="categories">
+    <button onclick="filter('all')">All</button>
+    <button onclick="filter('local')">Local Food</button>
+    <button onclick="filter('drinks')">Drinks</button>
+    <button onclick="filter('fast')">Fast Food</button>
+</div>
+
+<h2 class="menu-title">Our Menu</h2>
+
+<!-- FOOD ITEMS -->
+<div class="food-container">
+
+    <div class="card fast">
+        <img src="3.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p class="price">$5.00</p>
+        <button onclick="add('Pizza', 5.00)">Add to Cart</button>
+    </div>
+
+    <div class="card local">
+        <img src="1.jpg" alt="Jollof Rice">
+        <h3>Jollof Rice</h3>
+        <p class="price">$6.50</p>
+        <button onclick="add('Jollof Rice', 6.50)">Add to Cart</button>
+    </div>
+
+    <div class="card fast">
+        <img src="4.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p class="price">$5.99</p>
+        <button onclick="add('Burger', 5.99)">Add to Cart</button>
+    </div>
+
+    <div class="card local">
+        <img src="2.jpg" alt="Dumbor">
+        <h3>Dumbor</h3>
+        <p class="price">$5.00</p>
+        <button onclick="add('Dumbor', 5.00)">Add to Cart</button>
+    </div>
+
+    <div class="card drinks">
+        <img src="Guinness.jpg" alt="Guinness">
+        <h3>Guinness</h3>
+        <p class="price">$2.50</p>
+        <button onclick="add('Guinness', 2.50)">Add to Cart</button>
+    </div>
+
+    <div class="card local">
+        <img src="Fried Rice.jpg" alt="Fried Rice">
+        <h3>Fried Rice</h3>
+        <p class="price">$7.00</p>
+        <button onclick="add('Fried Rice', 7.00)">Add to Cart</button>
+    </div>
+
+    <div class="card drinks">
+        <img src="Beers.jpg" alt="Beers">
+        <h3>Beers</h3>
+        <p class="price">$2.00</p>
+        <button onclick="add('Beers', 2.00)">Add to Cart</button>
+    </div>
+
+    <div class="card drinks">
+        <img src="Mango Juice.jpg" alt="Mango Juice">
+        <h3>Mango Juice</h3>
+        <p class="price">$1.00</p>
+        <button onclick="add('Mango Juice', 1.00)">Add to Cart</button>
+    </div>
+
+    <div class="card drinks">
+        <img src="Soft Drinks.jpg" alt="Soft Drinks">
+        <h3>Soft Drinks</h3>
+        <p class="price">$0.50</p>
+        <button onclick="add('Soft Drinks', 0.50)">Add to Cart</button>
+    </div>
+
+</div>
+
+</body>
+</html>

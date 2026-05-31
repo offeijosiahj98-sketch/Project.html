@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Food - Checkout</title>
+
+    <link rel="stylesheet" href="Checkout.css">
+    <script src="Checkout.js" defer></script>
+</head>
+<body>
+
+    <main class="checkout-page">
+
+        <!-- Header -->
+        <header class="checkout-header">
+            <img src="Quick.png" alt="Quick Food Logo" class="logo">
+
+            <div class="header-content">
+                <h1>Checkout</h1>
+                <p>Review your order and complete your purchase.</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Payment Contacts</h3>
+                <p><strong>Orange Money:</strong> 0761123516</p>
+                <p><strong>MTN Mobile Money:</strong> +231 880361427</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <a href="Cart.html" class="back-btn">
+                ← Return to Cart
+            </a>
+        </div>
+
+        <!-- Checkout Content -->
+        <section class="checkout-content">
+
+            <!-- Order Summary -->
+            <div class="card order-summary">
+                <h2>Order Summary</h2>
+
+                <div id="cart-items">
+                    <!-- Cart items loaded by JavaScript -->
+                </div>
+
+                <div class="summary-details">
+                    <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                    <p>Delivery Fee: <span id="delivery-fee">$2.00</span></p>
+
+                    <hr>
+
+                    <h3>Total: <span id="total">$0.00</span></h3>
+                </div>
+            </div>
+
+            <!-- Customer Information -->
+            <div class="card customer-info">
+                <h2>Delivery Information</h2>
+
+                <form id="checkout-form">
+
+                    <!-- Full Name -->
+                    <div class="input-group">
+                        <label for="fullname">Full Name</label>
+                        <input
+                            type="text"
+                            id="fullname"
+                            placeholder="Enter your full name"
+                            required>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                            required>
+                    </div>
+
+                    <!-- Delivery Address -->
+                    <div class="input-group">
+                        <label for="address">Delivery Address</label>
+                        <input
+                            type="text"
+                            id="address"
+                            placeholder="Enter delivery address"
+                            required>
+                    </div>
+
+                    <!-- Special Instructions -->
+                    <div class="input-group">
+                        <label for="notes">Special Instructions</label>
+                        <textarea
+                            id="notes"
+                            rows="4"
+                            placeholder="Optional notes for your order"></textarea>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="payment-section">
+                        <h3>Payment Method</h3>
+
+                        <label class="payment-option">
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Cash on Delivery"
+                                checked>
+                            Cash on Delivery
+                        </label>
+
+                        <label class="payment-option">
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Orange Money">
+                            Orange Money
+                        </label>
+
+                       <label class="payment-option">
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="MTN Mobile Money">
+                            MTN Mobile Money
+                        </label>
+
+                        <label class="payment-option">
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Bank Card">
+                            Bank Card
+                        </label>
+                    </div>
+                    <h3>Mobile Money Instructions</h3>
+
+        <p id="mm-text">Select a payment method.</p>
+
+        <button onclick="copyNumber()" class="mm-btn">
+            Copy Number
+        </button>
+
+        <button onclick="closePopup()" class="mm-close">
+            Close
+        </button>
+
+    </div>
+</div>
+
+                    <!-- Buttons -->
+                    <div class="action-buttons">
+                        <button type="reset" class="cancel-btn">
+                            Clear Form
+                        </button>
+
+                        <button type="submit" class="place-order-btn">
+                            Place Order
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
